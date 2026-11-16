@@ -11,12 +11,6 @@ jobs:
 
   
     steps:
-      - name: "printing path"
-        run: pwd
-      - name: "printing name " 
-        run: echo moo
       - uses: actions/checkout@v3
-      
-      - name: "printing filepath " 
-        run: ls
-  
+      - name: "docker login"
+        run: docker login --username ${{ secrets.DOCKERNAME}} --passwored ${{secrets.DOCKERTOCN}}
