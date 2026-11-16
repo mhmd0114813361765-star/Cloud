@@ -1,0 +1,20 @@
+New folder/
+├── README.md
+├── docker-compose.yml
+├── structer
+├── backend/
+│   ├── Dockerfile
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+├── database/
+│   ├── Dockerfile
+│   └── init.sql
+└── frontend/
+    ├── Dockerfile
+    ├── app.js
+    ├── dashboard.html
+    ├── dashboard.js
+    ├── index.html
+    ├── nginx.conf
+    └── styles.css

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7fc">
+  <meta name="description" content="تابع موادك وخطة مذاكرتك على منصة ابن الهيثم.">
+  <title>لوحة الطالب | منصة ابن الهيثم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=dashboard">
+  <script src="/dashboard.js?v=dashboard" defer></script>
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-header">
+    <a class="dashboard-brand" href="/dashboard.html">
+      <span class="dashboard-brand-mark" aria-hidden="true">هـ</span>
+      <span>منصة ابن الهيثم</span>
+    </a>
+    <div class="dashboard-account">
+      <span class="account-avatar" aria-hidden="true">ط</span>
+      <span class="account-name" id="account-name">طالبنا</span>
+      <button class="logout-button" id="logout-button" type="button">تسجيل الخروج</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="dashboard-hero" aria-labelledby="welcome-title">
+      <div>
+        <span class="dashboard-kicker">مساحتك التعليمية</span>
+        <h1 id="welcome-title">أهلاً بك، <span id="student-name">طالبنا</span> 👋</h1>
+        <p>كل خطوة بتاخدها النهارده بتقرّبك من هدفك. اختار مادة وابدأ.</p>
+        <a class="hero-link" href="#courses">استكشف المواد <span aria-hidden="true">←</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-art-book">✦</span>
+        <span class="hero-art-orbit"></span>
+      </div>
+    </section>
+
+    <section class="dashboard-stats" aria-label="ملخص رحلتك التعليمية">
+      <article class="stat-card">
+        <span class="stat-icon stat-blue" aria-hidden="true">▤</span>
+        <div><strong>٣ مواد</strong><span>موادك الحالية</span></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon stat-green" aria-hidden="true">✓</span>
+        <div><strong id="completed-count">٠ من ٣</strong><span>مهام خطة اليوم</span></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon stat-gold" aria-hidden="true">◷</span>
+        <div><strong>٢٥ دقيقة</strong><span>وقت مذاكرة مقترح</span></div>
+      </article>
+    </section>
+
+    <section class="dashboard-section" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">خطتك الدراسية</span>
+          <h2 id="courses-title">موادك التعليمية</h2>
+        </div>
+        <span class="section-note">ابدأ بالدرس الأقرب لهدفك</span>
+      </div>
+      <div class="course-grid">
+        <article class="course-card course-math">
+          <span class="course-symbol" aria-hidden="true">∑</span>
+          <span class="course-label">الرياضيات</span>
+          <h3>أساسيات الجبر</h3>
+          <p>راجع المعادلات والمتغيرات بخطوات بسيطة.</p>
+          <div class="course-meta"><span>الدرس الأول</span><span>٢٠ دقيقة</span></div>
+          <a class="course-link" href="#daily-plan">ابدأ المذاكرة <span aria-hidden="true">←</span></a>
+        </article>
+        <article class="course-card course-science">
+          <span class="course-symbol" aria-hidden="true">⚛</span>
+          <span class="course-label">العلوم</span>
+          <h3>الضوء والرؤية</h3>
+          <p>اكتشف كيف ينتقل الضوء وكيف نرى الأشياء.</p>
+          <div class="course-meta"><span>الدرس الثاني</span><span>١٥ دقيقة</span></div>
+          <a class="course-link" href="#daily-plan">ابدأ المذاكرة <span aria-hidden="true">←</span></a>
+        </article>
+        <article class="course-card course-arabic">
+          <span class="course-symbol" aria-hidden="true">ع</span>
+          <span class="course-label">اللغة العربية</span>
+          <h3>القراءة والفهم</h3>
+          <p>طوّر مهاراتك في فهم النصوص واستخراج الأفكار.</p>
+          <div class="course-meta"><span>الدرس الأول</span><span>١٥ دقيقة</span></div>
+          <a class="course-link" href="#daily-plan">ابدأ المذاكرة <span aria-hidden="true">←</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-section daily-section" id="daily-plan" aria-labelledby="daily-title">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">خطوة بخطوة</span>
+          <h2 id="daily-title">خطة مذاكرتك اليوم</h2>
+        </div>
+        <span class="plan-progress" id="plan-progress">أنجزت ٠ من ٣ مهام</span>
+      </div>
+      <div class="daily-list">
+        <button class="daily-task" type="button" data-task="math">
+          <span class="task-check" aria-hidden="true">✓</span>
+          <span class="task-copy"><strong>مراجعة أساسيات الجبر</strong><span>الرياضيات · ٢٠ دقيقة</span></span>
+          <span class="task-state">إكمال المهمة</span>
+        </button>
+        <button class="daily-task" type="button" data-task="science">
+          <span class="task-check" aria-hidden="true">✓</span>
+          <span class="task-copy"><strong>مشاهدة درس الضوء والرؤية</strong><span>العلوم · ١٥ دقيقة</span></span>
+          <span class="task-state">إكمال المهمة</span>
+        </button>
+        <button class="daily-task" type="button" data-task="arabic">
+          <span class="task-check" aria-hidden="true">✓</span>
+          <span class="task-copy"><strong>قراءة نص قصير وتلخيصه</strong><span>اللغة العربية · ١٥ دقيقة</span></span>
+          <span class="task-state">إكمال المهمة</span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="dashboard-footer">منصة ابن الهيثم التعليمية · تعلّم، تطوّر، انطلق</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: ./backend
+      # context: 
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DB_FILE: /app/data/app.db
+    volumes:
+      - ./backend:/app
+      - backend_node_modules:/app/node_modules
+      - ./database/data:/app/data
+    expose:
+      - "3000"
+
+  frontend:
+    build: ./frontend
+      # context: 
+    restart: unless-stopped
+    volumes:
+      - ./frontend/index.html:/usr/share/nginx/html/index.html:ro
+      - ./frontend/styles.css:/usr/share/nginx/html/styles.css:ro
+      - ./frontend/app.js:/usr/share/nginx/html/app.js:ro
+      - ./frontend/dashboard.html:/usr/share/nginx/html/dashboard.html:ro
+      - ./frontend/dashboard.js:/usr/share/nginx/html/dashboard.js:ro
+    ports:
+      - "8080:80"
+
+volumes:
+  backend_node_modules:

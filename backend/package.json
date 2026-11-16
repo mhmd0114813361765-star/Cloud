@@ -1,0 +1,13 @@
+{
+  "name": "ibn-alhaytham-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API for the Ibn Alhaytham demo application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}
