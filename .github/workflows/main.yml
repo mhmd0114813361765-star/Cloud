@@ -16,8 +16,14 @@ jobs:
       - name: "docker login 2"
         run: docker login --username ${{ secrets.DOCKERNAME }} --password ${{ secrets.DOCKERTOCN }}
 
-      - name: "build image"
-        run: docker build -t ${{ secrets.DOCKERNAME }}/docker . 
+      - name: "build image bacend"
+        run: docker build -t ${{ secrets.DOCKERNAME }}/docker ./backend
+
+      - name: "push image"
+        run: docker push ${{ secrets.DOCKERNAME }}/docker
+
+      - name: "build image frontend"
+        run: docker build -t ${{ secrets.DOCKERNAME }}/docker ./frontend
 
       - name: "push image"
         run: docker push ${{ secrets.DOCKERNAME }}/docker
